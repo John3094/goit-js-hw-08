@@ -18,8 +18,8 @@ function onStorageSet() {
 
 function onStorageGet() {
     const savedSettings = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedSettings) {
     const parce = JSON.parse(savedSettings);
-    if (parce) {
     form.email.value = parce.email;
     form.message.value = parce.message;
     }
